@@ -1,0 +1,16 @@
+using namespace std;
+int main()
+{
+    unsigned long long x,cnt,n,s,d,mod;
+    while(scanf("%llu",&n)!=EOF){
+        cnt=0;
+        x=n;
+        while(x!=1){
+            mod=x%2;
+            d=x/2;
+            x=x/2+mod;
+            cnt+=d;
+        }
+        printf("%llu\n",cnt);
+    }
+}
