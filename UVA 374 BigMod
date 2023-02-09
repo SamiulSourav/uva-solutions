@@ -1,0 +1,15 @@
+using namespace std;
+unsigned long long x,y,z,t,m,n,i,j,k,c,cnt,d,sum,mn,mx;
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    while(cin>>x>>y>>m){
+        unsigned long long f=1,d=x;
+        while(y){
+            if(y&1) f=(f*d)%m;
+            y=y>>1;
+            d=(d*d)%m;
+        }
+        cout<<f<<"\n";
+    }
+}
